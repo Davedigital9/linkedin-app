@@ -7,13 +7,16 @@ const Login = (props) => {
                 <a  href="/">
                     <img src = "/images/login-logo.svg" alt = "" />
                 </a>
+                <div>
+                    <Join>Join Now</Join>
+                    <SignIn>Sign In</SignIn>
+                </div>
             </Nav>
         </Container>
-    )
+    );
 };
 
-
-const  Container = styled.div`
+const Container = styled.div`
     padding: 0px;
 `;
 
@@ -24,9 +27,50 @@ const Nav = styled.nav`
     display: flex;
     align-items: center;
     position: relative;
-    justify-center: space-between;
-    
+    justify-content: space-between;
+    flex-wrap: nowrap;
 
+    & > a {
+        width:135px;
+        height: 35px;
+        @media (max-width: 760px) {
+            padding: 0 5px;
+        }
+    }
+`;
+
+const Join =  styled.a`
+    font-size: 16px;
+    padding: 10px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0, 0.5);
+    margin-right: 12px;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.08);
+        color: rgba(0, 0, 0, 0.85);
+        text-decoration: none;
+    }
+`;
+
+const SignIn = styled.a`
+    box-shadow: inset 0 0 0 1px #0a66c2;
+    color: #0a66c2;
+    border-radius: 25px;
+    transition-duration: 167ms;
+    font-size: 16px;
+    padding: 10px 24px;
+    font-weight: 600;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+
+    &:hover{
+        background-color: rgba(112, 181, 249, 0.15);
+        color: #0a66c2;
+        text-decoration: none;
+        
+    }
 `;
 
 export default Login;

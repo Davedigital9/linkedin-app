@@ -7,8 +7,7 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Login />} /> {/* Use element prop */}
-          
+          <Route path="/" element={<Login />} />
         </Routes>
       </Router>
     </div>
