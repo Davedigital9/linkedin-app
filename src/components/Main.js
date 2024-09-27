@@ -65,8 +65,10 @@ const Main = (props) => {
             <button>
               <img
                 src="/images/ellipsis.svg"
-                alt="" width="25px"
-                height="25px"/>
+                alt=""
+                width="25px"
+                height="25px"
+              />
             </button>
           </SharedActor>
           <Description>Description</Description>
@@ -75,6 +77,65 @@ const Main = (props) => {
               <img src="/images/shared-image.jpg" alt="" />
             </a>
           </SharedImg>
+          <SocialCounts>
+            <li>
+              <button>
+                <img
+                  src="/images/clap-icon.svg"
+                  alt=""
+                  width="15px"
+                  height="15px"
+                />
+                <img
+                  src="/images/like-icon.svg"
+                  alt=""
+                  width="15px"
+                  height="15px"
+                />
+                <span>75</span>
+              </button>
+            </li>
+            <li>
+              <a>10 comments</a>
+            </li>
+          </SocialCounts>
+          <SocialActions>
+            <button>
+              <img src="/images/like-icon.svg"
+                    alt=""
+                    width="15px"
+                    height="15px"
+              />
+              <span>Like</span>
+            </button>
+
+            <button>
+              <img src="/images/comments-icon.svg"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+              <span>Comments</span>
+            </button>
+
+            <button>
+              <img src="/images/share-icon.svg"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+              <span>Share</span>
+            </button>
+
+            <button>
+              <img src="/images/send-icon.svg"
+                    alt=""
+                    width="15px"
+                    height="15px"
+                  />
+              <span>Send</span>
+            </button>
+          </SocialActions>
         </Article>
       </div>
     </Container>
@@ -175,7 +236,7 @@ const SharedActor = styled.div`
     overflow: hidden;
     display: flex;
     text-decoration: none;
-    
+
     img {
       width: 48px;
       height: 48px;
@@ -188,7 +249,7 @@ const SharedActor = styled.div`
       flex-basis: 0;
       margin-left: 8px;
       overflow: hidden;
-    
+
       span {
         text-align: left;
         &:first-child {
@@ -234,5 +295,44 @@ const SharedImg = styled.div`
     height: 100%;
   }
 `;
-  
+
+const SocialCounts = styled.ul`
+  line-height: 1.3;
+  display: flex;
+  align-items: flex-start;
+  overflow: auto;
+  margin: 0 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9e5df;
+  list-style: none;
+  li {
+    margin-right: 5px;
+    font-size: 12px;
+    button {
+      display: flex;
+    }
+  }
+`;
+
+const SocialActions = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  min-height: 40px;
+  padding: 4px 8px;
+  button {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px;
+    color: #0a66c2;
+
+    @media (min-width: 768px) {
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+`;
+
 export default Main;
