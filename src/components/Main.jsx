@@ -51,7 +51,7 @@ const Main = (props) => {
             <Description>Description</Description>
             <SharedImg>
                 <a>
-                    <img src="/images/shared-image.png" alt="" />
+                    <img src="/images/shared-image.jpg" alt="" />
                 </a>
             </SharedImg>
 
@@ -64,10 +64,10 @@ const Main = (props) => {
                     <img 
                         src="https://static-exp1.licdn.com/sc/h/5thsbmikm6a8uov24ygwd914f" alt="" 
                     />
-                    <span>82</span>
+                    <span>25</span>
                     </button>
                 </li>
-                <li><a> 12 comments </a></li>
+                <li><a> 10 comments </a></li>
             </SocialCounts>
             <SocialActions>
             <button>
